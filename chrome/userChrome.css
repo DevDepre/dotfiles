@@ -1,0 +1,46 @@
+#titlebar {
+  visibility: collapse !important;
+}
+
+.titlebar-buttonbox-container {
+  display: none !important;
+}
+
+
+/*Aba Ativa*/
+
+.tabbrowser-tab[select="true"] {
+  background-color: rgba(255,255,255,0.1) !important;
+  color: #fff !important;
+}
+
+/*Aba Inativa*/
+
+.tabbrowser-tab {
+  background-color: rgba(255,255,255,0.05) !important;
+  color: #ccc !important;
+}
+
+/*Barra de endereco transparent*/
+
+#urlbar-background {
+  background: rgba(0,0,0,0.4) !important;
+  border: none !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+/* transparencia Geral*/
+
+#navigator-toolbox,
+#TabsToolbar,
+#titlebar,
+#nav-bar,
+#PersonalToolbar {
+  background: transparent !important;
+  backdrop-filter: blur(10px) !important;
+  -moz-backdrop-filter: blur(10px) !important;
+  box-shadow: none !important;
+}
+
+
+
