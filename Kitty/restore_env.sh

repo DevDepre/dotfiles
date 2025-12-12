@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo ">>> Restaurando ambiente Kitty + Fish no Arch Linux..."
+
+echo ">>> Instalando pacotes com pacman..."
+sudo pacman -S --noconfirm \
+  kitty \
+  fish \
+  fzf \
+  fd \
+  bat \
+  atuin \
+  git \
+  btop \
+  curl
+
+echo ">>> Instalando plugins do Fish..."
+
+fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
+fish -c "fisher install PatrickF1/fzf.fish"
+
+echo ">>> Configurando Atuin ..."
+fish -c "atuin init fish | source"
+
+echo ">>> Ambiente restaurado com sucesso!"
+echo "Abra um novo terminal Fish para carregar tudo."
